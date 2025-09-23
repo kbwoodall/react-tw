@@ -11,7 +11,7 @@ function Itemdesc(props) {
 */
 function Chdg() {
   return (
-    <h2 className="text-2xl font-bold text-black text-center mb-4">
+    <h2 className="text-2xl font-bold text-black text-center mb-3">
       My favorite Customers
     </h2>
   );
@@ -111,7 +111,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-green-500 p-10">
+    <div className="min-h-screen bg-green-500 pt-1 md:pt-3 px-6 md:px-10 pb-8">
       <div className="w-full max-w-6xl mx-auto">
         <Chdg />
         <div className="flex w-full items-start justify-evenly gap-8">
