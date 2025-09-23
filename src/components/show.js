@@ -45,7 +45,7 @@ const CustomerList = ({ onImageClick }) => {
   };
 
   return (
-    <div className="overflow-x-auto bg-white rounded-xl shadow-lg p-6 w-[640px]">
+    <div className="bg-white rounded-xl shadow-lg p-6 w-[640px] h-[36rem] overflow-auto">
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
@@ -93,11 +93,11 @@ const Itemdesc = ({ selectedPic }) => {
   const selectedImage = nlist.find(item => item.keyn === selectedPic)?.value || bird;
   
   return (
-    <div className="rounded-xl shadow-lg p-6 h-[32rem] w-[32rem] flex items-center justify-center">
+    <div className="rounded-xl shadow-lg pt-0 px-6 pb-6 h-auto max-h-[70vh] md:h-[36rem] md:max-h-none w-[36rem] flex items-start justify-center overflow-hidden">
       <img
         src={selectedImage}
         alt={selectedImage === bird ? "Default item (bird)" : "Selected item preview"}
-        className="max-h-full max-w-full object-contain"
+        className="max-h-full w-full object-contain self-start"
       />
     </div>
   );
@@ -112,12 +112,14 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-green-500 p-10">
-      <div className="flex w-full max-w-6xl mx-auto items-start justify-evenly gap-8">
-        <div className="flex flex-col items-center">
-          <Chdg />
-          <CustomerList onImageClick={handleImageClick} />
+      <div className="w-full max-w-6xl mx-auto">
+        <Chdg />
+        <div className="flex w-full items-start justify-evenly gap-8">
+          <div className="flex flex-col items-center">
+            <CustomerList onImageClick={handleImageClick} />
+          </div>
+          <Itemdesc selectedPic={selectedItemPic} />
         </div>
-        <Itemdesc selectedPic={selectedItemPic} />
       </div>
     </div>
   );
