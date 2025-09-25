@@ -45,7 +45,7 @@ const CustomerList = ({ onImageClick }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 w-[640px] h-[36rem] overflow-auto">
+  <div className="bg-white rounded-xl shadow-lg p-6 w-[640px] h-[28rem] overflow-auto">
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
@@ -93,7 +93,7 @@ const Itemdesc = ({ selectedPic }) => {
   const selectedImage = nlist.find(item => item.keyn === selectedPic)?.value || bird;
   
   return (
-    <div className="rounded-xl shadow-lg pt-0 px-6 pb-6 h-auto max-h-[70vh] md:h-[36rem] md:max-h-none w-[36rem] flex items-start justify-center overflow-hidden">
+  <div className="rounded-xl shadow-lg pt-0 px-6 pb-6 h-auto max-h-[60vh] md:h-[28rem] md:max-h-none w-[36rem] flex items-start justify-center overflow-hidden">
       <img
         src={selectedImage}
         alt={selectedImage === bird ? "Default item (bird)" : "Selected item preview"}
