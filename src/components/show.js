@@ -12,7 +12,7 @@ function Itemdesc(props) {
 function Chdg() {
   return (
     <h2 className="text-2xl font-bold text-black text-center mb-3">
-      My favorite Customers
+      My favorite Customers (click on thumbnail)
     </h2>
   );
 }
